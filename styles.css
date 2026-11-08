@@ -1,0 +1,335 @@
+
+/* Base styles for Accessible Design Co. */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background-color: #FFBDBD;
+}
+
+
+
+/* Header and Navigation */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #595678;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+header nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Hero Section */
+
+.hero {
+    padding: 80px 40px;
+    text-align: center;
+    min-height: 350px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+     color: #332005;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #E667DB;
+    color: #332005;
+    border: 2px solid #332005;
+}
+
+.btn:hover {
+    background-color: #595678;
+    color: #FFFFFF;
+}
+
+
+
+
+
+/* About Us Section */
+
+.about {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #332005;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+}
+
+
+
+
+/* Services Section */
+
+.services {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #FFBDBD;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #332005;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    padding: 30px;
+    border: 2px solid #595678;
+    border-radius: 8px;
+    text-align: left;
+    background-color: #FFFFFF;
+}
+
+.service-card h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: #595678;
+}
+
+.service-card p {
+    line-height: 1.6;
+}
+
+.service-card p {
+    line-height: 1.6;
+}
+
+
+
+.service-card img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Contact Us Section */
+
+.contact {
+    padding: 60px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #332005;
+}
+
+.contact > p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #666666;
+    border-radius: 5px;
+    font: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group p {
+    font-size: 0.875rem;
+    margin-top: 5px;
+}
+
+.contact button {
+    padding: 12px 24px;
+    background-color: #E667DB;
+    color: #332005;
+    border: 2px solid #332005;
+    border-radius: 5px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #595678;
+    color: #FFFFFF;
+}
+
+
+
+
+/* Footer Section */
+
+.site-footer {
+    padding: 30px 40px;
+    text-align: center;
+    background-color: #595678;
+    color: #FFFFFF;
+    border-top: 1px solid #332005;
+}
+
+.site-footer p {
+    margin: 10px 0;
+}
+
+.site-footer nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.site-footer a {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.site-footer a:hover {
+    color: #FFBDBD;
+}
+
+
+
+/* Tablet Layout */
+
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        padding: 20px;
+    }
+}
+
+/* Mobile Layout */
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero,
+    .about,
+    .services,
+    .contact {
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about h2,
+    .services h2,
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* Keyboard Accessibility */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 3px;
+}
